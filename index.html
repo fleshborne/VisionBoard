@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Vision Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="text-center mb-4">
+        <h1>Our Vision Board</h1>
+        <p>Blake & Lily</p>
+    </header>
+
+    <main class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <!-- 1. Places to Visit Together -->
+            <section id="places-to-visit" class="col">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h2 class="card-title">Places to Visit Together</h2>
+                        <ul class="list-unstyled">
+                        </ul>
+                        <input type="text" id="visit-input" class="form-control mb-2" placeholder="Add a place...">
+                        <button type="button" class="btn btn-primary" onclick="addPlace()">Add</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Bucket List Experiences -->
+            <section id="bucket-list" class="col">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h2 class="card-title">Bucket List?</h2>
+                        <ul class="list-unstyled">
+                        </ul>
+                        <input type="text" id="bucket-input" class="form-control mb-2" placeholder="Add an experience...">
+                        <button type="button" class="btn btn-primary" onclick="addExperience()">Add</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Personal Growth Together -->
+            <section id="personal-growth" class="col">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h2 class="card-title">Manifestation</h2>
+
+                        <textarea id="growth-input" class="form-control mb-2" placeholder="Write goals here..."></textarea>
+                        <button type="button" class="btn btn-primary" onclick="addGrowthGoal()">Add</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Compliment Jar -->
+            <section id="compliment-jar" class="col">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h2 class="card-title">Hehe</h2>
+                        <div id="compliment-container" class="d-flex flex-wrap justify-content-center">
+                            <p class="text-center" id="compliment-output">Click the button</p>
+                        </div>
+                        <footer><button type="button" class="btn btn-primary" onclick="showCompliment()">Click</button></footer>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Hobbies to Try Together -->
+            <section id="hobbies" class="col">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h2 class="card-title">Things to Try Together</h2>
+                        <ul class="list-unstyled">
+                            <li>Try new things (hehe)</li>
+                        </ul>
+                        <input type="text" id="hobby-input" class="form-control mb-2" placeholder="Add a hobby..."></input>
+                        <button type="button" class="btn btn-primary" onclick="addHobby()">Add</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 9. Rainy Day Activities -->
+            <section id="rainy-day" class="col">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h2 class="card-title">Rainy Day Activities</h2>
+                        <ul class="list-unstyled">
+                            <li>Cozy things to do:</li>
+                        </ul>
+                        <input type="text" id="rainy-input" class="form-control mb-2" placeholder="Add an activity..."></input>
+                        <button type="button" class="btn btn-primary" onclick="addRainyDayActivity()">Add</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="text-center mt-4">
+        <p>&copy; 2024 Our Vision Board</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
